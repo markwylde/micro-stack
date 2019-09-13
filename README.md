@@ -5,9 +5,9 @@ docker swarm init
 
 # Create the networks
 ```bash
-docker network create --driver overlay --scope swarm --attachable web
-docker network create --driver overlay --scope swarm --attachable traefik
-docker network create --driver overlay --scope swarm --attachable consul
+docker network create --driver overlay --scope swarm --attachable --opt encrypted web
+docker network create --driver overlay --scope swarm --attachable --opt encrypted traefik
+docker network create --driver overlay --scope swarm --attachable --opt encrypted consul
 ```
 
 # Create the services
